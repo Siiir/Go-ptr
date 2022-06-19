@@ -1,20 +1,29 @@
 package ptr
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/Siiir/asserter"
+)
 
 func TestCmpBitsAs(t *testing.T) {
-	a := asserter.New(make([]uint, 2), func(s string) { t.Error(s) })
+	// Construction of asserter
+	a, e := asserter.New(make([]uint, 2), func(s string) { t.Error(s) })
+	if e != nil {
+		panic("e!=nil")
+	}
+
 	{
-		a.Inc(1)
-		// Equality of bit chunks in the same integer.
+		a.Inc(0)
+		// Equality of all bit chunks in the same integer.
 		var p int32 = 5
 		a.A(CmpBitsAs[uint8](&p, &p))
 		a.A(CmpBitsAs[int16](&p, &p))
 		a.A(CmpBitsAs[int32](&p, &p))
-		// Instruction ```CmpBitsAs[uint64](&p, &p)``` gives appropiate compile-time error
+		// Instruction ```CmpBitsAs[uint64](&p, &p)``` gives appropiate linkage-time error
 	}
 	{
-		a.Inc(1)
+		a.Inc(0)
 		// Equality of the first two bytes in different integers.
 
 		var p, q uint64 = 0b10111101_11011011_00000000_00000000_00000000_00000000_11011011_10111101, 0b10111101_11011011_11111111_11111111_11111111_11111111_11011011_10111101
