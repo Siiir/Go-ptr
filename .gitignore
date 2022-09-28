@@ -1,2 +1,2 @@
 .gitattributes
-*/go.sum
+go.sum
