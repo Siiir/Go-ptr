@@ -1,4 +1,4 @@
 /*
-	Facilitating pointer operations.
+	Facilitating memory & pointer operations.
 */
 package ptr
