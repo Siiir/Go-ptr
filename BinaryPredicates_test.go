@@ -2,11 +2,13 @@ package ptr
 
 import (
 	"testing"
+	"unsafe"
 
 	"github.com/Siiir/asserter/v2"
+	usptr "github.com/Siiir/unsafe/ptr"
 )
 
-func TestCmpBitsAs(t *testing.T) {
+func Test_CmpBitsAs_And_AllAliases(t *testing.T) {
 	// Construction of asserter
 	a, e := asserter.NewReseted(2, func(s string) { t.Error(s) })
 	if e != nil {
@@ -51,8 +53,28 @@ func TestCmpBitsAs(t *testing.T) {
 			ba2 = [17]byte{'Z', 'Y', 'X', 'W', 'a', 'b', 'c', 'd', 'a', 'b', 'c', 'd', 'a', 'b', 'c', 'd', '-'}
 		)
 
+		// ≥3.0
 		a.Assert(!Cmp128Bits(&ba1, &ba2))
-		// ...
+		a.Assert(!Cmp32Bits(&ba1, &ba2))
+		{ // ≥3.2
+			p1 := (*[5]byte)(unsafe.Pointer(&ba1))
+			p2 := (*[4]byte)(unsafe.Pointer(&ba2))
+			for _, offset := range [3]uintptr{4, 8, 12} {
+				a.Assert(Cmp32Bits(
+					p1, usptr.Offset(p2, offset),
+				))
+			}
+		}
+		// ≥3.5 − Same array.
+		// Same part.
+		a.Assert(CmpBitsAs[int32](
+			(*[7]uint8)(unsafe.Add(unsafe.Pointer(&ba1), 4)),
+			(*[5]uint8)(unsafe.Add(unsafe.Pointer(&ba1), 4)),
+		))
+		a.Assert(CmpBitsAs[int16](
+			(*[2]uint8)(unsafe.Add(unsafe.Pointer(&ba2), 4)),
+			(*[2]uint8)(unsafe.Add(unsafe.Pointer(&ba2), 12)),
+		))
 	}
 	{
 		a.Inc(0) // 4.*
