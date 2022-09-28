@@ -1,0 +1,14 @@
+github.com/Siiir/asserter v0.0.0-20220619082840-0abfdffbf938 h1:POl2dethswkXAfch4tWFUm376G9q9LC3fZNy9cROM80=
+github.com/Siiir/asserter v0.0.0-20220619082840-0abfdffbf938/go.mod h1:9GvzBBgI4hTijbqlp7Nndt0T8w1oL9/inAq9iHJXG80=
+github.com/Siiir/asserter v1.0.0 h1:uC4HBhHJhP2f/moduhIO2BUOjUmLjKjABgtpovN3yhA=
+github.com/Siiir/asserter v1.0.0/go.mod h1:9GvzBBgI4hTijbqlp7Nndt0T8w1oL9/inAq9iHJXG80=
+github.com/Siiir/asserter v1.0.1 h1:4nYfnz/ZTn0slj6YQjueh/VovB4H+HA7d2eNj4i6osA=
+github.com/Siiir/asserter v1.0.1/go.mod h1:9GvzBBgI4hTijbqlp7Nndt0T8w1oL9/inAq9iHJXG80=
+github.com/Siiir/asserter/v2 v2.0.1 h1:0TY18RNfGGHI2E46GMNcK9FFIGUiBmORQoxXNPP4TCI=
+github.com/Siiir/asserter/v2 v2.0.1/go.mod h1:A9bQ376nHUX2kb4vVJwnTrQXkbEWpzTmoOeE8f+GpTs=
+github.com/Siiir/unsafe v1.0.0 h1:81tLfYbJy9gA7jrMeAideP9DExzwee44fpp8AVx6rRc=
+github.com/Siiir/unsafe v1.0.0/go.mod h1:5fCsJNXqKv2WaNr9kXZsUglVExR/N3j/jiQeLougS6s=
+github.com/Siiir/unsafe/ptr v0.0.0-20220927132944-da3792ecfd4c h1:hbVcvfnn6t07nFDb+i8EvXRNlFOPTXOVQRlIoClo2GA=
+github.com/Siiir/unsafe/ptr v0.0.0-20220927132944-da3792ecfd4c/go.mod h1:rb/k0R0VFKWJ/SKu/Unc2JG6bkmNgCQT26RNij1Lbgk=
+golang.org/x/exp v0.0.0-20220921164117-439092de6870 h1:j8b6j9gzSigH28O5SjSpQSSh9lFd6f5D/q0aHjNTulc=
+golang.org/x/exp v0.0.0-20220921164117-439092de6870/go.mod h1:cyybsKvd6eL0RnXn6p/Grxp8F5bW7iYuBgsNCOHpMYE=
