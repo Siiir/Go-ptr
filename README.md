@@ -1,5 +1,6 @@
 # ptr
  Facilitating pointer operations.
-#### Documentation
-https://pkg.go.dev/github.com/Siiir/ptr
-https://pkg.go.dev/github.com/Siiir/ptr
+ 
+## Documentation
+[v1](https://pkg.go.dev/github.com/Siiir/ptr)  
+[v2](https://pkg.go.dev/github.com/Siiir/ptr/v2)  
