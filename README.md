@@ -1,6 +1,7 @@
 # ptr
+
 ## Purpose
- Facilitating pointer operations.
+Facilitating memory & pointer operations. 
  
 ## Documentation
 [github.com/Siiir/ptr v1](https://pkg.go.dev/github.com/Siiir/ptr)  
